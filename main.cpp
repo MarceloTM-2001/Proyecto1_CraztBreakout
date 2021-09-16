@@ -3,13 +3,18 @@
 
 using namespace std;
 
+/**
+ * Clase Bloque define las características principales que deben de tener los bloques
+ * es la clase padre de todos los bloques
+ */
 class Bloque{
 private:
-    string Sorpresa;
-    int destroyed(){
+    string Sorpresa;//Tipo de sorpresa
+    int destroyed(){//Se destruyó el bloque
         tipo="Destruido";
         return this->puntos;
     }
+
 public:
     int vida;
     int puntos;
@@ -17,9 +22,11 @@ public:
     string getSorpresa(){
         return this->Sorpresa;
     }
+
     void setSorpresa(string Sorpresa){
         this->Sorpresa=Sorpresa;
     }
+
     void virtual defineSorpresa(){
         int probability=rand()%4+1;//Genera un número del 1-4,
         if(probability==1){ //Probabilidad del 25%
@@ -105,57 +112,68 @@ class Bloques{
 private:
 Bloque *grid[6];//
 public:
-    Bloques(){
-        fillgrid();
-    }
     Bloque** getgrid(){
     return grid;
     }
+
     Bloque getBlock(int i,int j){
     return this->grid[i][j];
     }
+
     void fillgrid(){
         int ajusteprofundos=0;
         int profundos[2];
         int cantprofundos=-1;
         for(int i=0;i<6;i++){
+            Bloque row[13];
             for(int j=0;j<13;j++){
                 int probability=rand()%11+1+ajusteprofundos;
                 if(j==profundos[0]||j==profundos[1]){
                     BInterno newblock;
-                    this->grid[i][j]=newblock;
+                    row[j]=newblock;
                 }else if (probability<=2){
                     BProfundo newBlock;
                     cantprofundos+=1;
                     profundos[cantprofundos]=j;
-                    this->grid[i][j]=newBlock;
+                    ajusteprofundos+=1;
+                    row[j]=newBlock;
+                    cout<<"Yes"<<endl;
                 }else if(probability<=4){
                     BTriple newBlock;
-                    this->grid[i][j]=newBlock;
+                    row[j]=newBlock;
                 }else if(probability<=7){
                     BDoble newBlock;
-                    this->grid[i][j]=newBlock;
+                    row[j]=newBlock;
                 }else{
                     BComun newBlock;
-                    this->grid[i][j]=newBlock;
+                    row[j]=newBlock;
                 }
             }
+            this->grid[i]=row;
         }
     }
 };
 
 class server{
 public:
+    Bloques Grid;
+    int Puntaje;
+    int Bloques;
+    int CantBolas;
+    int Profundidad;
+
     server(){
-        Bloques Bloque;
-        int Puntaje=0;
-        int Bloques=78;
-        int CantBolas=1;
-        int Profundidad=0;
+        this->Puntaje=0;
+        this->Bloques=78;
+        this->CantBolas=1;
+        this->Profundidad=0;
+        this->Grid.fillgrid();
     }
 };
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    cout<<"init"<<endl;
+    server servidor;
+    cout<<"fin"<<endl;
+
 }
