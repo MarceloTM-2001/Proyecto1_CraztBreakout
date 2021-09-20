@@ -218,7 +218,10 @@ public:
 };
 
 
-
+/**
+ * Contiene toda la información relacionada al juego y la mantiene actualizadda en
+ * base a los cambios ocurridos en la GUI.
+ */
 class server{
 public:
     Bloques Grid;
@@ -236,6 +239,10 @@ public:
         this->Grid.fillgrid();
         this->Ballspeeds[0]=5;
     }
+    /**
+     * se perdió una bola
+     * @param index (bola que se perdió)
+     */
     void LostBall(int index){
         for(int j=index+1;j<this->CantBolas+1;j++){
             this->Ballspeeds[index]=this->Ballspeeds[j];
@@ -243,26 +250,32 @@ public:
         }
         this->CantBolas--;
     }
-
+    /**
+     * Cuando se gana la una bola
+     */
     void GainedBall(){
         this->Ballspeeds[this->CantBolas]=5;
         this->CantBolas++;
     }
 
+    /**
+     * Se activa cuando el bloque roto contiene una sorpresa
+     * @param Buff (es aumento o disminución de velocidad
+     */
     void SpeedSurprise(bool Buff){
-        if (Buff){
+        if (Buff){//Aumento de velocidad
             for(int i=0;i<this->CantBolas;i++){
                 if(this->Ballspeeds[i]!=10){
                     this->Ballspeeds[i]++;
-                }else{
+                }else{//Velocidad máxima 10
                     continue;
                 }
             }
-        }else{
+        }else{//Disminución
             for(int i=0;i<this->CantBolas;i++){
                 if(this->Ballspeeds[i]!=1){
                     this->Ballspeeds[i]--;
-                }else{
+                }else{//Disminución mínima 1
                     continue;
                 }
             }
