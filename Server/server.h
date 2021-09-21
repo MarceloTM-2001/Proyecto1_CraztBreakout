@@ -13,11 +13,13 @@
 class server{
 public:
     Bloques Grid;
+    int Length;
     int Ballspeeds[100];
     int Puntaje;
     int CantBloques;
     int CantBolas;
     int Profundidad;
+    bool modoprofundo;
 
     server();
 
@@ -32,11 +34,26 @@ public:
      */
     void GainedBall();
 
+    void ProfunActive(bool Activate);
+
     /**
-     * Se activa cuando el bloque roto contiene una sorpresa
-     * @param Buff (es aumento o disminución de velocidad
+     * Maneja toda la información que conlleva el golpe a una bola
+     * @param i
+     * @param j
+     */
+    void Ballhit(int i,int j);
+
+    /**
+     * Se activa cuando el bloque roto contiene una sorpresa de veocidad
+     * @param Buff (es aumento o disminución de velocidad)
      */
     void SpeedSurprise(bool Buff);
+
+    /**
+     * Se activa cuando el bloque roto contiene una sorpresa del largo de la barra
+     * @param Buff (es aumento o disminución de velocidad
+     */
+    void LengthSurprise(bool Buff);
 };
 
 

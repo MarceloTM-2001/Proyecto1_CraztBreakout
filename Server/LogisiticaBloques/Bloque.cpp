@@ -8,7 +8,7 @@
 using namespace std;
 
     int Bloque::destroyed(){ //Se destruyó el bloque
-        tipo="Destruido";
+        this->tipo=0;
         return this->puntos;
     }
     string Bloque::getSorpresa(){
@@ -27,11 +27,11 @@ using namespace std;
             if (probability2==1){
                 this->Sorpresa="+V";//Aumentar velocidad de la bola
             }else if (probability2==2){
-                this->Sorpresa="-V";//Disminuir velocidad de la bola
+                this->Sorpresa+="-V";//Disminuir velocidad de la bola
             }else if (probability2==3){
-                this->Sorpresa="+B";//Aumentar tamaño de la barra
+                this->Sorpresa+="+B";//Aumentar tamaño de la barra
             }else{
-                this->Sorpresa="-B";//Disminuir tamaño de la barra
+                this->Sorpresa+="-B";//Disminuir tamaño de la barra
             }
         }else{
             this->Sorpresa="N";//No hay sorpresa

@@ -6,7 +6,7 @@
 
     BloqueDoble::BloqueDoble(){
         this->vida=2;
-        this->tipo="Doble";
+        this->tipo=2;
         this->puntos=15;
         this->defineSorpresa();
     }

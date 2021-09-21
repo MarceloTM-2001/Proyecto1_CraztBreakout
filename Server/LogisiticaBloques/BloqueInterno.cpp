@@ -5,7 +5,7 @@
 #include "BloqueInterno.h"
     BloqueInterno::BloqueInterno(){
         this->vida=1;
-        this->tipo="Interno";
+        this->tipo=5;
         this->puntos=30;
         this->defineSorpresa();
     }
