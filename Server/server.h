@@ -15,7 +15,7 @@ public:
     Bloques Grid;
     int Ballspeeds[100];
     int Puntaje;
-    int Bloques;
+    int CantBloques;
     int CantBolas;
     int Profundidad;
 
