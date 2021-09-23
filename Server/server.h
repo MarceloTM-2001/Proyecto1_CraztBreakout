@@ -5,6 +5,8 @@
 #ifndef UNTITLED2_SERVER_H
 #define UNTITLED2_SERVER_H
 #include "LogisiticaBloques/Bloques.h"
+#include "iostream"
+using namespace std;
 
 /**
  * Contiene toda la información relacionada al juego y la mantiene actualizadda en
@@ -30,10 +32,28 @@ public:
     void LostBall(int index);
 
     /**
-     * Cuando se gana la una bola
+     * Se recibe un mensaje de la clase usuario y se debe interpretar
+     * @param msg
+     */
+    void MessageReciever(string msg);
+
+
+    /**
+     * El usuario se gana la una bola
      */
     void GainedBall();
 
+    /**
+     * Si un bloque contiene sorpresa, hace los cambios necesarios
+     * @param surprise
+     */
+    void Managesurprise(string surprise);
+
+
+    /**
+    * El usuario activó o desactivó el modo profundo
+    * @param Activate
+    */
     void ProfunActive(bool Activate);
 
     /**
@@ -51,7 +71,7 @@ public:
 
     /**
      * Se activa cuando el bloque roto contiene una sorpresa del largo de la barra
-     * @param Buff (es aumento o disminución de velocidad
+     * @param Buff (es aumento o disminución de velocidad)
      */
     void LengthSurprise(bool Buff);
 };
