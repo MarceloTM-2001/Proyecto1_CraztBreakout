@@ -8,6 +8,10 @@ void Msgcreator::stringclean() {
     this->Msj="";
 }
 
+string Msgcreator::getmsj() {
+    return this->Msj;
+}
+
 string Msgcreator::sendhit(int i,int j) {
     this->stringclean();
     this->Msj="C-Hi-";
@@ -40,11 +44,11 @@ string Msgcreator::senddestroyed(int i, int j) {
     return this->Msj;
 }
 
-string Msgcreator::sendblocks(int **Blocks){
+string Msgcreator::sendblocks(string Blocks){
     this->stringclean();
-    this->Msj.append("I-Bl-[");
+    this->Msj.append("I-Bl-");
     for(int i=0;i<6;i++){
-        this->Msj.append("[");
+        this->Msj.append(Blocks);
     }
 
 }

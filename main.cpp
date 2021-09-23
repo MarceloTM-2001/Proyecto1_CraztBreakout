@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     cout<<"init"<<endl;
     server servidor;
+    servidor.Martrparser();
     cout<<"fin"<<endl;
 
 }

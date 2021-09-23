@@ -74,7 +74,10 @@ public:
      * @param Buff (es aumento o disminución de velocidad)
      */
     void LengthSurprise(bool Buff);
+
+    string Martrparser();
 };
+
 
 
 

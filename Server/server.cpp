@@ -142,3 +142,22 @@
     }
 }
 
+string server::Martrparser() {
+    string out="[";
+    for(int i=0;i<6;i++){
+        out.append("[");
+        for(int j=0;j<13;j++){
+            int type=this->Grid.grid[i][j].tipo;
+            out.append(to_string(type));
+            out.append(",");
+        }
+        if(i!=5) {
+            out.append("],");
+        }else{
+            out.append("]")
+        }
+    }
+    out.append("]");
+    return out;
+}
+

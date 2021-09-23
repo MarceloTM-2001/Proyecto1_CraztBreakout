@@ -17,6 +17,8 @@ public:
  */
     void stringclean();
 
+    string getmsj();
+
     string sendhit(int i, int j);
 
     string sendspeeds(int speeds[100],int cantbolas);
