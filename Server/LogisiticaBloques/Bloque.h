@@ -21,7 +21,16 @@ private:
 public:
     int vida;
     int puntos;
-    string tipo;
+    /**
+     * Tipos de bloque
+     * 0=Destruido
+     * 1= común
+     * 2=Doble
+     * 3=Triple
+     * 4=Profundo
+     * 5=Interno
+     */
+    int tipo;
 
     string getSorpresa();
 

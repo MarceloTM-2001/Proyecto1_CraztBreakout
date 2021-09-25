@@ -6,7 +6,7 @@
 
     BloqueProfundo::BloqueProfundo(){
         this->vida=0;
-        this->tipo="Profundo";
+        this->tipo=4;
         this->puntos=0;
         defineSorpresa();
     }

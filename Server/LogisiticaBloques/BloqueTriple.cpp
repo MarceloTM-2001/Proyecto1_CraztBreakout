@@ -7,7 +7,7 @@
 
     BloqueTriple::BloqueTriple() {
         this->vida=3;
-        this->tipo="Triple";
+        this->tipo=3;
         this->puntos=20;
         this->defineSorpresa();
     }

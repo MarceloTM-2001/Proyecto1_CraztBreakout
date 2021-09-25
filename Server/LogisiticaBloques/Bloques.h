@@ -19,19 +19,12 @@
 class Bloques{
 
 private:
-    Bloque *grid[6];//
+    int ajusteprofundos=0;
+    int profundos[2]={-1,-1};
+    int cantprofundos=-1;
 
 public:
-
-    Bloque** getgrid();
-
-    /**
-     * Devuelve un bloque en específico de la matriz
-     * @param i (Posición fila)
-     * @param j (Posición columna)
-     * @return Bloque de la posición indicada
-     */
-    Bloque getBlock(int i,int j);
+    Bloque grid[6][13];
 
     /**
      * Llena el grid de bloques
@@ -43,5 +36,7 @@ public:
      * Profundo=20%->10%->0% (después del ajuste de profundos)
      */
     void fillgrid();
+
+    int getCantProf();
 };
 #endif //UNTITLED2_BLOQUES_H

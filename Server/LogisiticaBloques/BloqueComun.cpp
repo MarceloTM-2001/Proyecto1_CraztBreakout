@@ -7,7 +7,7 @@
 
 BloqueComun::BloqueComun(){
         this->vida=1;
-        this->tipo="Comun";
+        this->tipo=1;
         this->puntos=10;
         this->defineSorpresa();
     }
