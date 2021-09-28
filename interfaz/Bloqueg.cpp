@@ -28,3 +28,12 @@ void Bloqueg::setBloque(sf::RectangleShape bloque2) {
 sf::RectangleShape Bloqueg::getBloque() {
     return this->bloque;
 }
+
+bool Bloqueg::getdestruido() {
+    return destruido;
+}
+
+void Bloqueg::setdestruido(bool destru) {
+    destruido = destru;
+
+}

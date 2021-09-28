@@ -9,9 +9,9 @@
 
 class ventana {
 public:
-    float xball = 20;
-    float yball = 10;
-    float direccionx = .0f;
+    float xball = 200;
+    float yball = 300;
+    float direccionx = .6f;
     float posxBarra = 250;
     float direcciony = .6f;
     Bloqueg filas[6][13];

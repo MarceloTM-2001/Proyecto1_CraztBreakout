@@ -45,8 +45,123 @@ void ventana::juego() {
         if (0 >yball )
             direcciony += .6f;
         //efecto de colision con bloques
-        //if (chocabloque(38,0,125,125+20)  )
-           // filas[0][0].setcoords(0,0);
+        for(int i=0;i<6;i++){
+            for(int j=0;j<13;j++){
+                if (chocabloque(filas[i][j].getx()+38,
+                                filas[i][j].getx(),
+                                filas[i][j].gety(),
+                                filas[i][j].gety()+20 ) &&
+                    filas[i][j].getdestruido()  ){
+                    filas[i][j].setcoords(-30,-30);
+                    filas[i][j].setdestruido(false);
+
+                }
+
+                }
+            }
+            /*if (chocabloque(filas[0][0].getx()+38,
+                            filas[0][0].getx(),
+                            filas[0][0].gety(),
+                            filas[0][0].gety()+20 ) &&
+                            filas[0][0].getdestruido()  ){
+                filas[0][0].setcoords(-30,-30);
+                filas[0][0].setdestruido(false);
+
+            }
+            if (chocabloque(filas[0][1].getx()+38,
+                            filas[0][1].getx(),
+                            filas[0][1].gety(),
+                            filas[0][1].gety()+20 ) &&
+                            filas[0][1].getdestruido() ){
+                filas[0][1].setcoords(-30,-30);
+                filas[0][1].setdestruido(false);
+
+            }
+            if (chocabloque(filas[0][2].getx()+38,
+                            filas[0][2].getx(),
+                            filas[0][2].gety(),
+                            filas[0][2].gety()+20 ) &&
+                            filas[0][2].getdestruido() ){
+                filas[0][2].setcoords(-30,-30);
+                filas[0][2].setdestruido(false);}
+            if (chocabloque(filas[0][3].getx()+38,
+                            filas[0][3].getx(),
+                            filas[0][3].gety(),
+                            filas[0][3].gety()+20 ) &&
+                            filas[0][3].getdestruido() ){
+                filas[0][3].setcoords(-30,-30);
+                filas[0][3].setdestruido(false);}
+            if (chocabloque(filas[0][4].getx()+38,
+                            filas[0][4].getx(),
+                            filas[0][4].gety(),
+                            filas[0][4].gety()+20 ) &&
+                filas[0][3].getdestruido() ){
+                filas[0][3].setcoords(-30,-30);
+                filas[0][3].setdestruido(false);}
+            if (chocabloque(filas[0][4].getx()+38,
+                            filas[0][4].getx(),
+                            filas[0][4].gety(),
+                            filas[0][4].gety()+20 ) &&
+                filas[0][4].getdestruido() ){
+                filas[0][4].setcoords(-30,-30);
+                filas[0][4].setdestruido(false);}
+            if (chocabloque(filas[0][5].getx()+38,
+                            filas[0][5].getx(),
+                            filas[0][5].gety(),
+                            filas[0][5].gety()+20 ) &&
+                filas[0][5].getdestruido() ){
+                filas[0][5].setcoords(-30,-30);
+                filas[0][5].setdestruido(false);}
+            if (chocabloque(filas[0][6].getx()+38,
+                            filas[0][6].getx(),
+                            filas[0][6].gety(),
+                            filas[0][6].gety()+20 ) &&
+                filas[0][6].getdestruido() ){
+                filas[0][6].setcoords(-30,-30);
+                filas[0][6].setdestruido(false);}
+            if (chocabloque(filas[0][7].getx()+38,
+                            filas[0][7].getx(),
+                            filas[0][7].gety(),
+                            filas[0][7].gety()+20 ) &&
+                filas[0][7].getdestruido() ){
+                filas[0][7].setcoords(-30,-30);
+                filas[0][7].setdestruido(false);}
+            if (chocabloque(filas[0][8].getx()+38,
+                            filas[0][8].getx(),
+                            filas[0][8].gety(),
+                            filas[0][8].gety()+20 ) &&
+                filas[0][8].getdestruido() ){
+                filas[0][8].setcoords(-30,-30);
+                filas[0][8].setdestruido(false);}
+            if (chocabloque(filas[0][9].getx()+38,
+                            filas[0][9].getx(),
+                            filas[0][9].gety(),
+                            filas[0][9].gety()+20 ) &&
+                filas[0][9].getdestruido() ){
+                filas[0][9].setcoords(-30,-30);
+                filas[0][9].setdestruido(false);}
+            if (chocabloque(filas[0][10].getx()+38,
+                            filas[0][10].getx(),
+                            filas[0][10].gety(),
+                            filas[0][10].gety()+20 ) &&
+                filas[0][10].getdestruido() ){
+                filas[0][10].setcoords(-30,-30);
+                filas[0][10].setdestruido(false);}
+            if (chocabloque(filas[0][11].getx()+38,
+                            filas[0][11].getx(),
+                            filas[0][11].gety(),
+                            filas[0][11].gety()+20 ) &&
+                filas[0][11].getdestruido() ){
+                filas[0][11].setcoords(-30,-30);
+                filas[0][11].setdestruido(false);}
+            if (chocabloque(filas[0][12].getx()+38,
+                            filas[0][12].getx(),
+                            filas[0][12].gety(),
+                            filas[0][12].gety()+20 ) &&
+                filas[0][12].getdestruido() ){
+                filas[0][12].setcoords(-30,-30);
+                filas[0][12].setdestruido(false);}*/
+
 
 
 
@@ -77,7 +192,7 @@ void ventana::dibujabloques() {
     float x = 0;
     float y = 150;
     for(int i=0;i<6;i++){
-        Bloqueg columna[13];
+        //Bloqueg columna[13];
 
         y -= 25;
         x = 0;
@@ -93,14 +208,15 @@ void ventana::dibujabloques() {
 
             x += 39;
             window.draw(bloque.getBloque());
+            window.display();
             filas[i][j]= bloque;
 
 
         }
-        std::cout<<filas[0][0].getx()<<"--"<<filas[0][0].gety()<<"--";
+
 
     }
-    std::cout<<filas[0][0].getx()<<"++&/&"<<filas[0][0].gety()<<"**";
+
 }
 
 bool ventana::chocabloque(int xd, int xi, int ya, int yb ) {
@@ -139,19 +255,19 @@ bool ventana::chocabloque(int xd, int xi, int ya, int yb ) {
 }
 
 void ventana::dibujabloques2() {
-       std::cout<<filas[0][0].getx()<<"++"<<filas[0][0].gety()<<"**";
-        /*for(int i=0;i<6;i++){
+
+        for(int i=0;i<6;i++){
             for(int j=0;j<13;j++){
                 sf::RectangleShape bloqueh(sf::Vector2f(38.f,20.f));
-                //std::cout<<filas[i][j].getx()<<"++"<<filas[i][j].gety()<<"**";
                 bloqueh.setPosition(filas[i][j].getx(),filas[i][j].gety());
                 bloqueh.setFillColor(sf::Color::Blue);
-                //filas[i][j].setBloque(bloqueh);
+                filas[i][j].setBloque(bloqueh);
 
-                window.draw(bloqueh);
+                window.draw(filas[i][j].getBloque());
+
         }
-            dibujar2 = false;
-    }*/
+            //dibujar2 = false;
+    }
 }
 
 int main()
