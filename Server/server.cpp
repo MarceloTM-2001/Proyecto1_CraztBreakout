@@ -229,7 +229,9 @@
                 for (int j = 0; j < 13; j++) {
                     int type = this->Grid.grid[i][j].tipo;
                     out.append(to_string(type));
-                    out.append(",");
+                    if(j!=12){
+                        out.append(",");
+                    }
                 }
                 if (i != 5) {
                     out.append("],");
@@ -246,7 +248,9 @@
         for(int i =0;i<this->CantBolas;i++){
             int speed=this->Ballspeeds[i];
             out.append(to_string(speed));
-            out.append(",");
+            if(i!=this->CantBolas-1){
+                out.append(",");
+            }
         }
         out.append("]");
         return out;
