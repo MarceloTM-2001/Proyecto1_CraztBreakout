@@ -21,6 +21,7 @@ private:
 public:
     int vida;
     int puntos;
+
     /**
      * Tipos de bloque
      * 0=Destruido

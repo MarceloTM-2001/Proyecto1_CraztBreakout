@@ -10,6 +10,8 @@
         this->puntos=0;
         defineSorpresa();
     }
+
+    //OVERRIDE
     void BloqueProfundo::defineSorpresa(){
         setSorpresa("N");
     }

@@ -17,15 +17,21 @@ public:
  */
     void stringclean();
 
-    string getmsj();
+    string sendlen(int len);
 
-    string sendhit(int i, int j);
+    string sendprof(int prof);
 
-    string sendspeeds(int speeds[100],int cantbolas);
+    string sendpoints(int points);
 
-    string sendblocks(int *Blocks[]);
+    string endgame(bool condition);
+
+    string sendspeeds(string Speeds);
+
+    string sendblocks(string Blocks);
 
     string senddestroyed(int i , int j);
+
+    string sendprofactivation(bool active);
 
 
 

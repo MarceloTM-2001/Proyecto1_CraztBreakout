@@ -6,13 +6,45 @@
 #define UNTITLED2_SERVER_H
 #include "LogisiticaBloques/Bloques.h"
 #include "iostream"
+#include "Comunicaciones/Msgcreator.h"
+#include "sys/socket.h"
+#include "sys/types.h"
+#include "netdb.h"
+#include "string.h"
+#include "string"
+#include "pthread.h"
+#include "vector"
+#include "unistd.h"
+
+
 using namespace std;
+/**
+ * Estructura que contiene el descriptor e informaci{on necesaria de los sockets
+ */
+struct DataSocket{
+    int descriptor;
+    sockaddr_in info;
+};
+
 
 /**
  * Contiene toda la información relacionada al juego y la mantiene actualizadda en
  * base a los cambios ocurridos en la GUI.
  */
 class server{
+private:
+    Msgcreator create();
+    int descriptor;//Identifica los sistemas
+    sockaddr_in info;//Información del socket servidor
+    vector<int> clientes;//Almacena los clientes que se conecten
+
+    bool createsocket();
+
+    bool enlazarkernel();
+
+    void*ControladorCliente(void*obj);
+
+
 public:
     Bloques Grid;
     int Length;
@@ -22,6 +54,7 @@ public:
     int CantBolas;
     int Profundidad;
     bool modoprofundo;
+    Msgcreator msgcreator;
 
     server();
 
@@ -70,13 +103,32 @@ public:
     void SpeedSurprise(bool Buff);
 
     /**
+     * Cambia la velocidad de una sola bola por el golpe en giro de la barra
+     * @param i
+     */
+    void Speedhit(int i);
+
+    /**
      * Se activa cuando el bloque roto contiene una sorpresa del largo de la barra
      * @param Buff (es aumento o disminución de velocidad)
      */
     void LengthSurprise(bool Buff);
-
+/**
+ * Transforma los bloques en una matriz
+ * @return Matriz en fomato string
+ */
     string Martrparser();
+
+    string Speedparser();
+
+    void initialinfo();
+//--------------------Funciones Comunicación Sockets------------------
+ void run();
+
+ void setMsj(const char *msn);
+
 };
+
 
 
 
