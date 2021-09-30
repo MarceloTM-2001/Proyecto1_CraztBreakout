@@ -64,6 +64,8 @@
             this->Speedhit(i);
         } else if (msg[0] == Speedtime[0] && msg[1] == Speedtime[1]) {
             this->SpeedSurprise(true);
+        }else{
+            cout<<"No debe de pasar"<<endl;
         }
 }
 
