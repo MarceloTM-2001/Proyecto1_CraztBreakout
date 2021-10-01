@@ -1,0 +1,95 @@
+\hypertarget{server_8h_source}{}\doxysection{server.\+h}
+\label{server_8h_source}\index{C:/Users/Lenovo/CLionProjects/untitled2/Server/server.h@{C:/Users/Lenovo/CLionProjects/untitled2/Server/server.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Lenovo on 20/9/2021.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef UNTITLED2\_SERVER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define UNTITLED2\_SERVER\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}LogisiticaBloques/Bloques.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}iostream"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Comunicaciones/Msgcreator.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}sys/socket.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}sys/types.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}netdb.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}string.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}string"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}pthread.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}vector"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}unistd.h"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{24 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_data_socket}{DataSocket}}\{}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} descriptor;}
+\DoxyCodeLine{26     sockaddr\_in info;}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34 \textcolor{keyword}{class }\mbox{\hyperlink{classserver}{server}}\{}
+\DoxyCodeLine{35 \textcolor{keyword}{private}:}
+\DoxyCodeLine{36     Msgcreator create();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} descriptor;\textcolor{comment}{//Identifica los sistemas}}
+\DoxyCodeLine{38     sockaddr\_in info;\textcolor{comment}{//Información del socket servidor}}
+\DoxyCodeLine{39     vector<int> clientes;\textcolor{comment}{//Almacena los clientes que se conecten}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool} createsocket();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} enlazarkernel();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void}*ControladorCliente(\textcolor{keywordtype}{void}*obj);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{public}:}
+\DoxyCodeLine{49     Bloques Grid;}
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} Length;}
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} Ballspeeds[100];}
+\DoxyCodeLine{52     \textcolor{keywordtype}{int} Puntaje;}
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} CantBloques;}
+\DoxyCodeLine{54     \textcolor{keywordtype}{int} CantBolas;}
+\DoxyCodeLine{55     \textcolor{keywordtype}{int} Profundidad;}
+\DoxyCodeLine{56     \textcolor{keywordtype}{bool} modoprofundo;}
+\DoxyCodeLine{57     Msgcreator msgcreator;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \mbox{\hyperlink{classserver}{server}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{classserver_a906062334df89221462a4b809a904e9e}{LostBall}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{classserver_adab6af7e8ce80c9a8e45cd457c67b2c0}{MessageReciever}}(\textcolor{keywordtype}{string} msg);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{classserver_a9a397ae50899509151e8d6de27e7f754}{GainedBall}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{classserver_ac0c21e5091db056af051a37eaa09cffd}{Managesurprise}}(\textcolor{keywordtype}{string} surprise);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 }
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} \mbox{\hyperlink{classserver_af94f3568d387318811d74ae5e308cb04}{ProfunActive}}(\textcolor{keywordtype}{bool} Activate);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} \mbox{\hyperlink{classserver_a8d9a29af95b2e7dc5f1a62621829a1cb}{Ballhit}}(\textcolor{keywordtype}{int} i,\textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} \mbox{\hyperlink{classserver_ab9c6072163a058617f94cd540c048630}{SpeedSurprise}}(\textcolor{keywordtype}{bool} Buff);}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{109     \textcolor{keywordtype}{void} \mbox{\hyperlink{classserver_a64ecee2ed2aa3ccf8a3619bb8c353e1b}{Speedhit}}(\textcolor{keywordtype}{int} i);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{115     \textcolor{keywordtype}{void} \mbox{\hyperlink{classserver_aa4dc1df8023078aac0836113dc9278f1}{LengthSurprise}}(\textcolor{keywordtype}{bool} Buff);}
+\DoxyCodeLine{120     \textcolor{keywordtype}{string} \mbox{\hyperlink{classserver_aec9bee7d8dadc736814197b8fc5814a8}{Martrparser}}();}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \textcolor{keywordtype}{string} Speedparser();}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \textcolor{keywordtype}{void} initialinfo();}
+\DoxyCodeLine{125 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Funciones Comunicación Sockets-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{126  \textcolor{keywordtype}{void} run();}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128  \textcolor{keywordtype}{void} setMsj(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *msn);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \};}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//UNTITLED2\_SERVER\_H}}
+
+\end{DoxyCode}

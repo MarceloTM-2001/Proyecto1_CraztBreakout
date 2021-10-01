@@ -1,0 +1,188 @@
+\hypertarget{classserver}{}\doxysection{server Class Reference}
+\label{classserver}\index{server@{server}}
+
+
+{\ttfamily \#include $<$server.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classserver_a906062334df89221462a4b809a904e9e}{Lost\+Ball}} (int index)
+\item 
+void \mbox{\hyperlink{classserver_adab6af7e8ce80c9a8e45cd457c67b2c0}{Message\+Reciever}} (string msg)
+\item 
+void \mbox{\hyperlink{classserver_a9a397ae50899509151e8d6de27e7f754}{Gained\+Ball}} ()
+\item 
+void \mbox{\hyperlink{classserver_ac0c21e5091db056af051a37eaa09cffd}{Managesurprise}} (string surprise)
+\item 
+void \mbox{\hyperlink{classserver_af94f3568d387318811d74ae5e308cb04}{Profun\+Active}} (bool Activate)
+\item 
+void \mbox{\hyperlink{classserver_a8d9a29af95b2e7dc5f1a62621829a1cb}{Ballhit}} (int i, int j)
+\item 
+void \mbox{\hyperlink{classserver_ab9c6072163a058617f94cd540c048630}{Speed\+Surprise}} (bool Buff)
+\item 
+void \mbox{\hyperlink{classserver_a64ecee2ed2aa3ccf8a3619bb8c353e1b}{Speedhit}} (int i)
+\item 
+void \mbox{\hyperlink{classserver_aa4dc1df8023078aac0836113dc9278f1}{Length\+Surprise}} (bool Buff)
+\item 
+string \mbox{\hyperlink{classserver_aec9bee7d8dadc736814197b8fc5814a8}{Martrparser}} ()
+\item 
+\mbox{\Hypertarget{classserver_a109d67ebf46e7f0d6d47095ed2b0fb7d}\label{classserver_a109d67ebf46e7f0d6d47095ed2b0fb7d}} 
+string {\bfseries Speedparser} ()
+\item 
+\mbox{\Hypertarget{classserver_a77f619344b266a3b1c1d57243af97f74}\label{classserver_a77f619344b266a3b1c1d57243af97f74}} 
+void {\bfseries initialinfo} ()
+\item 
+\mbox{\Hypertarget{classserver_a66bd9eb32455d0581abe2c82dda4dc87}\label{classserver_a66bd9eb32455d0581abe2c82dda4dc87}} 
+void {\bfseries run} ()
+\item 
+\mbox{\Hypertarget{classserver_ab4e20d68636a25effe14b2ab1201edcf}\label{classserver_ab4e20d68636a25effe14b2ab1201edcf}} 
+void {\bfseries set\+Msj} (const char $\ast$msn)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classserver_a4e50774d1789b23de970af7d06f34966}\label{classserver_a4e50774d1789b23de970af7d06f34966}} 
+Bloques {\bfseries Grid}
+\item 
+\mbox{\Hypertarget{classserver_a11f7e8b1b2491fe93952b06edc41ab6a}\label{classserver_a11f7e8b1b2491fe93952b06edc41ab6a}} 
+int {\bfseries Length}
+\item 
+\mbox{\Hypertarget{classserver_aaf994feb86ca7f23ea6f269c5babcc70}\label{classserver_aaf994feb86ca7f23ea6f269c5babcc70}} 
+int {\bfseries Ballspeeds} \mbox{[}100\mbox{]}
+\item 
+\mbox{\Hypertarget{classserver_ab7c04c992c11a6bfbfff4396c518b750}\label{classserver_ab7c04c992c11a6bfbfff4396c518b750}} 
+int {\bfseries Puntaje}
+\item 
+\mbox{\Hypertarget{classserver_a36d55cf16d4a54bc7fd58ef8837104c1}\label{classserver_a36d55cf16d4a54bc7fd58ef8837104c1}} 
+int {\bfseries Cant\+Bloques}
+\item 
+\mbox{\Hypertarget{classserver_a032b61a0fddb66be33157490eb1944a7}\label{classserver_a032b61a0fddb66be33157490eb1944a7}} 
+int {\bfseries Cant\+Bolas}
+\item 
+\mbox{\Hypertarget{classserver_af1eb776db2a3d5f613d318dd4629ffec}\label{classserver_af1eb776db2a3d5f613d318dd4629ffec}} 
+int {\bfseries Profundidad}
+\item 
+\mbox{\Hypertarget{classserver_a56586afefed8edc06c01639d04c2d08e}\label{classserver_a56586afefed8edc06c01639d04c2d08e}} 
+bool {\bfseries modoprofundo}
+\item 
+\mbox{\Hypertarget{classserver_a1510af9ed71cc589b91df8c02e950199}\label{classserver_a1510af9ed71cc589b91df8c02e950199}} 
+Msgcreator {\bfseries msgcreator}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contiene toda la información relacionada al juego y la mantiene actualizadda en base a los cambios ocurridos en la GUI. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserver_a8d9a29af95b2e7dc5f1a62621829a1cb}\label{classserver_a8d9a29af95b2e7dc5f1a62621829a1cb}} 
+\index{server@{server}!Ballhit@{Ballhit}}
+\index{Ballhit@{Ballhit}!server@{server}}
+\doxysubsubsection{\texorpdfstring{Ballhit()}{Ballhit()}}
+{\footnotesize\ttfamily void server\+::\+Ballhit (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+Maneja toda la información que conlleva el golpe a una bola 
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver_a9a397ae50899509151e8d6de27e7f754}\label{classserver_a9a397ae50899509151e8d6de27e7f754}} 
+\index{server@{server}!GainedBall@{GainedBall}}
+\index{GainedBall@{GainedBall}!server@{server}}
+\doxysubsubsection{\texorpdfstring{GainedBall()}{GainedBall()}}
+{\footnotesize\ttfamily void server\+::\+Gained\+Ball (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+El usuario se gana la una bola \mbox{\Hypertarget{classserver_aa4dc1df8023078aac0836113dc9278f1}\label{classserver_aa4dc1df8023078aac0836113dc9278f1}} 
+\index{server@{server}!LengthSurprise@{LengthSurprise}}
+\index{LengthSurprise@{LengthSurprise}!server@{server}}
+\doxysubsubsection{\texorpdfstring{LengthSurprise()}{LengthSurprise()}}
+{\footnotesize\ttfamily void server\+::\+Length\+Surprise (\begin{DoxyParamCaption}\item[{bool}]{Buff }\end{DoxyParamCaption})}
+
+Se activa cuando el bloque roto contiene una sorpresa del largo de la barra 
+\begin{DoxyParams}{Parameters}
+{\em Buff} & (es aumento o disminución de velocidad) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver_a906062334df89221462a4b809a904e9e}\label{classserver_a906062334df89221462a4b809a904e9e}} 
+\index{server@{server}!LostBall@{LostBall}}
+\index{LostBall@{LostBall}!server@{server}}
+\doxysubsubsection{\texorpdfstring{LostBall()}{LostBall()}}
+{\footnotesize\ttfamily void server\+::\+Lost\+Ball (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+se perdió una bola 
+\begin{DoxyParams}{Parameters}
+{\em index} & (bola que se perdió) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver_ac0c21e5091db056af051a37eaa09cffd}\label{classserver_ac0c21e5091db056af051a37eaa09cffd}} 
+\index{server@{server}!Managesurprise@{Managesurprise}}
+\index{Managesurprise@{Managesurprise}!server@{server}}
+\doxysubsubsection{\texorpdfstring{Managesurprise()}{Managesurprise()}}
+{\footnotesize\ttfamily void server\+::\+Managesurprise (\begin{DoxyParamCaption}\item[{string}]{surprise }\end{DoxyParamCaption})}
+
+Si un bloque contiene sorpresa, hace los cambios necesarios 
+\begin{DoxyParams}{Parameters}
+{\em surprise} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver_aec9bee7d8dadc736814197b8fc5814a8}\label{classserver_aec9bee7d8dadc736814197b8fc5814a8}} 
+\index{server@{server}!Martrparser@{Martrparser}}
+\index{Martrparser@{Martrparser}!server@{server}}
+\doxysubsubsection{\texorpdfstring{Martrparser()}{Martrparser()}}
+{\footnotesize\ttfamily string server\+::\+Martrparser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Transforma los bloques en una matriz \begin{DoxyReturn}{Returns}
+Matriz en fomato string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classserver_adab6af7e8ce80c9a8e45cd457c67b2c0}\label{classserver_adab6af7e8ce80c9a8e45cd457c67b2c0}} 
+\index{server@{server}!MessageReciever@{MessageReciever}}
+\index{MessageReciever@{MessageReciever}!server@{server}}
+\doxysubsubsection{\texorpdfstring{MessageReciever()}{MessageReciever()}}
+{\footnotesize\ttfamily void server\+::\+Message\+Reciever (\begin{DoxyParamCaption}\item[{string}]{msg }\end{DoxyParamCaption})}
+
+Se recibe un mensaje de la clase usuario y se debe interpretar 
+\begin{DoxyParams}{Parameters}
+{\em msg} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver_af94f3568d387318811d74ae5e308cb04}\label{classserver_af94f3568d387318811d74ae5e308cb04}} 
+\index{server@{server}!ProfunActive@{ProfunActive}}
+\index{ProfunActive@{ProfunActive}!server@{server}}
+\doxysubsubsection{\texorpdfstring{ProfunActive()}{ProfunActive()}}
+{\footnotesize\ttfamily void server\+::\+Profun\+Active (\begin{DoxyParamCaption}\item[{bool}]{Activate }\end{DoxyParamCaption})}
+
+El usuario activó o desactivó el modo profundo 
+\begin{DoxyParams}{Parameters}
+{\em Activate} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver_a64ecee2ed2aa3ccf8a3619bb8c353e1b}\label{classserver_a64ecee2ed2aa3ccf8a3619bb8c353e1b}} 
+\index{server@{server}!Speedhit@{Speedhit}}
+\index{Speedhit@{Speedhit}!server@{server}}
+\doxysubsubsection{\texorpdfstring{Speedhit()}{Speedhit()}}
+{\footnotesize\ttfamily void server\+::\+Speedhit (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+Cambia la velocidad de una sola bola por el golpe en giro de la barra 
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classserver_ab9c6072163a058617f94cd540c048630}\label{classserver_ab9c6072163a058617f94cd540c048630}} 
+\index{server@{server}!SpeedSurprise@{SpeedSurprise}}
+\index{SpeedSurprise@{SpeedSurprise}!server@{server}}
+\doxysubsubsection{\texorpdfstring{SpeedSurprise()}{SpeedSurprise()}}
+{\footnotesize\ttfamily void server\+::\+Speed\+Surprise (\begin{DoxyParamCaption}\item[{bool}]{Buff }\end{DoxyParamCaption})}
+
+Se activa cuando el bloque roto contiene una sorpresa de veocidad 
+\begin{DoxyParams}{Parameters}
+{\em Buff} & (es aumento o disminución de velocidad) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lenovo/\+CLion\+Projects/untitled2/\+Server/server.\+h\item 
+C\+:/\+Users/\+Lenovo/\+CLion\+Projects/untitled2/\+Server/server.\+cpp\end{DoxyCompactItemize}
